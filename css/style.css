@@ -173,6 +173,7 @@ body {
 /* Start of (Header) Styles  */
 header {
     padding: 8px 0;
+    margin-bottom: 0;
 }
 
 .header-container {
@@ -216,6 +217,10 @@ header {
     position: relative;
 }
 
+.header-flex-parent nav ul li.has-sub-menu {
+    position: relative;
+}
+
 .header-container .header-flex-parent nav ul .has-sub-menu .sub-menu {
     position: absolute;
     z-index: 100;
@@ -226,13 +231,14 @@ header {
     border: 1px solid #CBCBCB;
     border-radius: 7px;
     padding: 8px;
+    visibility: hidden;
     opacity: 0;
     scale: 0.5;
-    transform: translateZ(-500px) translateX(-50%);
-    -webkit-transform: translateZ(-500px) translateX(-50%);
-    -moz-transform: translateZ(-500px) translateX(-50%);
-    -ms-transform: translateZ(-500px) translateX(-50%);
-    -o-transform: translateZ(-500px) translateX(-50%);
+    transform: translateZ(-100px) translateX(-50%);
+    -webkit-transform: translateZ(-100px) translateX(-50%);
+    -moz-transform: translateZ(-100px) translateX(-50%);
+    -ms-transform: translateZ(-100px) translateX(-50%);
+    -o-transform: translateZ(-100px) translateX(-50%);
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     -ms-border-radius: 7px;
@@ -244,10 +250,11 @@ header {
     -o-transition: .6s;
 }
 
-.header-flex-parent nav ul li.has-sub-menu:hover .sub-menu {
+.header-flex-parent nav ul li.has-sub-menu:hover>.sub-menu {
     display: flex;
     opacity: 1;
     scale: 1;
+    visibility: visible;
     z-index: 3;
     transform: translateZ(0) translateX(-50%);
     -webkit-transform: translateZ(0) translateX(-50%);
